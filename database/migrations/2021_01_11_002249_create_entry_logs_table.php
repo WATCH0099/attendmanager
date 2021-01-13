@@ -15,8 +15,8 @@ class CreateEntryLogsTable extends Migration
     {
         Schema::create('entry_logs', function (Blueprint $table) {
             $table->bigIncrements('user_id');
-            $table->string('entry_time');
-            $table->string('out_time');
+            $table->timestamp('entry_time');
+            $table->timestamp('out_time');
             $table->timestamps();
         });
     }
